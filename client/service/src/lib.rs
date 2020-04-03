@@ -32,6 +32,11 @@ mod check_block;
 mod import_blocks;
 mod export_blocks;
 
+pub use revert_chain::*;
+pub use check_block::*;
+pub use import_blocks::*;
+pub use export_blocks::*;
+pub use sp_consensus::import_queue::ImportQueue;
 use std::{borrow::Cow, io, pin::Pin};
 use std::marker::PhantomData;
 use std::net::SocketAddr;
@@ -41,7 +46,7 @@ use wasm_timer::Instant;
 use std::task::{Poll, Context};
 use parking_lot::Mutex;
 
-use sc_client::Client;
+pub use sc_client::Client;
 use futures::{
 	Future, FutureExt, Stream, StreamExt,
 	channel::mpsc,
