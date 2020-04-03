@@ -53,11 +53,13 @@ use sp_runtime::traits::{NumberFor, Block as BlockT};
 use parity_util_mem::MallocSizeOf;
 
 pub use self::error::Error;
+/*
 pub use self::builder::{
 	new_full_client,
 	ServiceBuilder, ServiceBuilderCommand, TFullClient, TLightClient, TFullBackend, TLightBackend,
 	TFullCallExecutor, TLightCallExecutor,
 };
+*/
 pub use config::{Configuration, Roles, PruningMode, DatabaseConfig};
 pub use sc_chain_spec::{
 	ChainSpec, GenericChainSpec, Properties, RuntimeGenesis, Extension as ChainSpecExtension,
